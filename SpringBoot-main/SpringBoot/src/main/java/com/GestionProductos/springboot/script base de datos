@@ -1,0 +1,16 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS product_catalog;
+USE product_catalog;
+
+-- Crear la tabla de productos
+CREATE TABLE IF NOT EXISTS product (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price DOUBLE NOT NULL
+);
+
+-- Insertar algunos datos de ejemplo
+INSERT INTO product (name, price) VALUES
+    ('Laptop', 999.99),
+    ('Smartphone', 599.99),
+    ('Headphones', 79.99);
